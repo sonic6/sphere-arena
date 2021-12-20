@@ -95,8 +95,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.5324179, y: 1, z: 2.0278978}
+  m_Center: {x: -0.26620972, y: 0, z: -0.5139489}
 --- !u!114 &4315676847954840181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,8 +109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49e05b3745be2040b7ba497fae45377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushStrength: 200
-  pushDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &2779232528230491044
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,8 +204,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.3735251, y: 1, z: 2.0049038}
+  m_Center: {x: 0.18676236, y: 0, z: -0.5024519}
 --- !u!114 &2172039974291135127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,8 +218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257f354f3cc355741b5e1c7adbf46946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushStrength: 200
-  pushDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &6185783189565182350
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +232,7 @@ GameObject:
   - component: {fileID: 6185783189565182348}
   - component: {fileID: 6185783189565182351}
   - component: {fileID: 6185783189565182344}
+  - component: {fileID: 1162631012581189148}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -336,6 +333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedLimiter: 5
+  activeWeapon: {fileID: 0}
 --- !u!54 &6185783189565182344
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -352,6 +350,102 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 0
+--- !u!82 &1162631012581189148
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6185783189565182350}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6185783190635328097
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,5 +555,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55a7ca11776f994a97945c5eedc89aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushStrength: 200
-  pushDirection: {x: 0, y: 0, z: 0}

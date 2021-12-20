@@ -18,6 +18,7 @@ public class GoalBox : MonoBehaviour
         if(other.GetComponent<Sphere>())
         {
             gameScores.RegisterGoal(playerIndex, other.gameObject);
+            SphereSpawner.spawner.SphereOut();
         }
     }
 }

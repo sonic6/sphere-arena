@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MiddleWeapon : PlayerWeapon
 {
-    protected override void SetDirection()
+    protected override void SetDirection(int dir)
     {
-        pushDirection = new Vector3(0, 0, 1);
+        pushDirection = new Vector3(0, 0, 1) * dir;
     }
 }
