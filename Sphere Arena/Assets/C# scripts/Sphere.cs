@@ -19,10 +19,6 @@ public class Sphere : MonoBehaviour
         GetComponent<SphereCollider>().attachedRigidbody.AddForce(random * lastForce * speed);
     }
 
-    private void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter(Collision collision)
     {

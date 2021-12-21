@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 5696907743767153214}
   - component: {fileID: 5696907743767153215}
   - component: {fileID: 5696907743767153152}
-  - component: {fileID: 5696907743767153211}
-  - component: {fileID: 5696907743767153153}
   - component: {fileID: 5696907743767153210}
   - component: {fileID: 1322832472760535700}
   m_Layer: 0
@@ -97,7 +95,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5696907743767153154}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f59e34a0f43bb194c88256d4a8e94250, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -119,38 +117,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5696907743767153211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696907743767153154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
-    _objectReferences: []
---- !u!114 &5696907743767153153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5696907743767153154}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _data:
-    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"collection":{"$content":[{"name":"torque
-      ","value":{"$content":2.0,"$type":"System.Single"},"$version":"A"}],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":179.8401,"y":284.9795},"zoom":0.6999999,"elements":[{"coroutine":false,"defaultValues":{},"position":{"x":-216.0,"y":-112.0},"guid":"404a26bb-45da-416e-97de-e4b923a5a12e","$version":"A","$type":"Unity.VisualScripting.Start","$id":"11"},{"chainable":false,"member":{"name":"AddForce","parameterTypes":["UnityEngine.Vector3","UnityEngine.ForceMode"],"targetType":"UnityEngine.Rigidbody","targetTypeName":"UnityEngine.Rigidbody","$version":"A"},"defaultValues":{"target":null,"%force":{"x":0.0,"y":0.0,"z":-250.0,"$type":"UnityEngine.Vector3"},"%mode":{"$content":"Force","$type":"UnityEngine.ForceMode"}},"position":{"x":22.0,"y":-120.0},"guid":"f904238e-b83d-4e3f-8660-7bbe6ba557ab","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"13"},{"chainable":false,"member":{"name":"motorTorque","parameterTypes":null,"targetType":"UnityEngine.WheelCollider","targetTypeName":"UnityEngine.WheelCollider","$version":"A"},"defaultValues":{"target":null,"input":{"$content":0.0,"$type":"System.Single"}},"position":{"x":271.0,"y":160.0},"guid":"22460cd5-969d-425b-a2d7-ba347c144daa","$version":"A","$type":"Unity.VisualScripting.SetMember","$id":"16"},{"defaultValues":{},"position":{"x":-5.0,"y":264.0},"guid":"09298282-7382-41f7-915a-19efbdc37040","$version":"A","$type":"Unity.VisualScripting.This","$id":"19"},{"specifyFallback":false,"kind":"Graph","defaultValues":{"name":{"$content":"torque
-      ","$type":"System.String"}},"position":{"x":31.0,"y":396.0},"guid":"7f5e2523-aeb3-4142-b3b7-2a0ed2668b4a","$version":"A","$type":"Unity.VisualScripting.GetVariable","$id":"21"},{"sourceUnit":{"$ref":"11"},"sourceKey":"trigger","destinationUnit":{"$ref":"13"},"destinationKey":"enter","guid":"798581da-f0a3-47ef-94f9-f952fc09de6f","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"19"},"sourceKey":"self","destinationUnit":{"$ref":"16"},"destinationKey":"target","guid":"c014f7c4-30e8-4dd0-9941-1e9c0129f456","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"21"},"sourceKey":"value","destinationUnit":{"$ref":"16"},"destinationKey":"input","guid":"decbc0a2-4ba5-4145-80a9-533d3fbc1f6b","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
-    _objectReferences: []
 --- !u!114 &5696907743767153210
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,9 +7,11 @@ public class GoalBox : MonoBehaviour
     GameScores gameScores;
     [Tooltip("is this player 1 or player 2")]
     [SerializeField] int playerIndex;
+    [SerializeField] Transform particles;
 
     private void Awake()
     {
+        particles = Instantiate(particles, transform);
         gameScores = FindObjectOfType<GameScores>();
     }
 
@@ -17,6 +19,10 @@ public class GoalBox : MonoBehaviour
     {
         if(other.GetComponent<Sphere>())
         {
+            GetComponent<AudioSource>().Play();
+            particles.position = other.transform.position;
+            foreach (ParticleSystem sys in particles.GetComponentsInChildren<ParticleSystem>())
+                sys.Play();
             gameScores.RegisterGoal(playerIndex, other.gameObject);
             SphereSpawner.spawner.SphereOut();
         }

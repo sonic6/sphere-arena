@@ -29,6 +29,8 @@ public class SphereSpawner : MonoBehaviour
         {
             Spawn();
             yield return new WaitForSeconds(timeGap);
+            if(timeGap > 3)
+                timeGap = timeGap - 1;
         }
         yield return null;
     }

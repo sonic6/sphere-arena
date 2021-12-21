@@ -25,24 +25,12 @@ public abstract class PlayerWeapon : MonoBehaviour
         transform.parent.GetComponent<AudioSource>().clip = weaponNoise;
     }
 
-    //private void OnTriggerStay(Collider other)
-    //{
-    //    //for testing
-    //    if (Input.GetKey(KeyCode.Space))
-    //        Push(other);
-    //}
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.GetComponent<Sphere>())
             GetComponentInParent<DebugPlayerMovement>().activeWeapon = this;
 
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.GetComponent<Sphere>())
-            GetComponentInParent<DebugPlayerMovement>().activeWeapon = null;
     }
 
     protected abstract void SetDirection(int directionMultiplier);

@@ -19,6 +19,6 @@ public class GameScores : MonoBehaviour
         Destroy(ball);
         playerScores[playerIndex - 1]++;
         uiTexts[playerIndex - 1].text = "Player " + playerIndex + ": " + playerScores[playerIndex - 1];
-        print("player " + playerIndex + " scored");
+        //print("player " + playerIndex + " scored");
     }
 }
