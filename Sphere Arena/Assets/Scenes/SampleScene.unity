@@ -653,6 +653,7 @@ MonoBehaviour:
   uiTexts:
   - {fileID: 315834797}
   - {fileID: 2028239207}
+  winningScore: 7
 --- !u!114 &598792452
 MonoBehaviour:
   m_ObjectHideFlags: 0

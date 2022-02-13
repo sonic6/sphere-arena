@@ -23,4 +23,5 @@ public class WallEjector : MonoBehaviour
             Destroy(flash, 3);
         }
     }
+
 }
