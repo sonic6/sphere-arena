@@ -371,7 +371,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 69
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -407,8 +407,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 265.82935, y: -58.641724}
-  m_SizeDelta: {x: 531.6588, y: 117.28351}
+  m_AnchoredPosition: {x: 202.21312, y: -58.641724}
+  m_SizeDelta: {x: 404.426, y: 117.284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &449299900
 GameObject:
@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -1341,7 +1341,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 100
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -1366,13 +1366,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.15851966, y: -0, z: -0, w: 0.9873559}
-  m_LocalPosition: {x: 0, y: 8.03, z: -19.31}
+  m_LocalRotation: {x: 0.27105024, y: -0, z: -0, w: 0.9625652}
+  m_LocalPosition: {x: 0, y: 8.33, z: -12.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 18.242, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.454, y: 0, z: 0}
 --- !u!1 &1008427544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,7 +2445,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 69
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2481,8 +2481,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -265.8294, y: -58.641724}
-  m_SizeDelta: {x: 531.6588, y: 117.28351}
+  m_AnchoredPosition: {x: -197.79, y: -58.641724}
+  m_SizeDelta: {x: 395.57, y: 117.284}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &5696907744064830431
 PrefabInstance:

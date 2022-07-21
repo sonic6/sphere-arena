@@ -9,6 +9,8 @@ public class DebugPlayerMovement : MonoBehaviour
     Rigidbody rb;
     [HideInInspector] public PlayerWeapon activeWeapon;
 
+    Vector3 movementPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,15 @@ public class DebugPlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.position = new Vector3(transform.position.x + Input.GetAxis("Horizontal") / speedLimiter, transform.position.y, transform.position.z);
+        //move pawns with keyboard buttons
+        //movementPosition = new Vector3(transform.position.x + Input.GetAxis("Horizontal") / speedLimiter, transform.position.y, transform.position.z);
+
+        //move pawns using phone tilt
+        movementPosition = new Vector3(transform.position.x + Input.acceleration.x / speedLimiter, transform.position.y, transform.position.z);
+
+        rb.MovePosition(movementPosition);
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
