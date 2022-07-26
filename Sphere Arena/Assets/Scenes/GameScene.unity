@@ -1576,6 +1576,7 @@ GameObject:
   - component: {fileID: 1345919866}
   - component: {fileID: 1345919865}
   - component: {fileID: 1345919867}
+  - component: {fileID: 1345919868}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1707,6 +1708,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponNoise: {fileID: 8300000, guid: fbaca8a388af8ad43a65397dc08c7067, type: 3}
   weaponStrength: 700
+--- !u!114 &1345919868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345919864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d9037fd1c80daf4e9013fd0dc0afadd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerPrefab: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+  player1: {fileID: 6185783191396989047}
+  player2: {fileID: 1546979932}
 --- !u!1 &1371364542
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,12 +2208,20 @@ PrefabInstance:
       value: Player (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
       propertyPath: m_TagString
       value: PlayerOne
       objectReference: {fileID: 0}
     - target: {fileID: 6185783190635328111, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
       propertyPath: pushDirection.z
       value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650044542847808876, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+      propertyPath: sceneViewId
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7067379598566753661, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
       propertyPath: pushDirection.x
@@ -2213,6 +2237,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+--- !u!1 &1546979932 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+  m_PrefabInstance: {fileID: 1546979931}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1634514792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2609,6 +2638,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
       propertyPath: m_TagString
       value: PlayerTwo
       objectReference: {fileID: 0}
@@ -2620,6 +2653,10 @@ PrefabInstance:
       propertyPath: pushDirection.z
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 6650044542847808876, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+      propertyPath: sceneViewId
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7067379598566753661, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
       propertyPath: pushDirection.x
       value: 200
@@ -2630,3 +2667,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+--- !u!1 &6185783191396989047 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
+  m_PrefabInstance: {fileID: 6185783191396989046}
+  m_PrefabAsset: {fileID: 0}

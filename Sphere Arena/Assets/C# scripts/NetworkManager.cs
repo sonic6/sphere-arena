@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NetworkManager : MonoBehaviourPunCallbacks
 {
@@ -35,5 +36,13 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         print("joined room ");
+        StartGame();
+    }
+
+    private void StartGame()
+    {
+        if (PhotonNetwork.IsMasterClient)
+            PhotonRoom.masterClient = true;
+        SceneManager.LoadScene(1);
     }
 }
