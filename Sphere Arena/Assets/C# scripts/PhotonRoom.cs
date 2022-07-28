@@ -7,7 +7,6 @@ using UnityEngine;
 public class PhotonRoom : MonoBehaviour
 {
     [SerializeField] GameObject playerPrefab;
-    public static bool masterClient = false;
 
     [SerializeField] GameObject player1;
     [SerializeField] GameObject player2;
@@ -20,7 +19,7 @@ public class PhotonRoom : MonoBehaviour
 
     private void SpawnPlayer()
     {
-        if(masterClient)
+        if(PhotonNetwork.IsMasterClient)
             PhotonNetwork.Instantiate(playerPrefab.name, player1.transform.position, player1.transform.rotation);
         else
             PhotonNetwork.Instantiate(playerPrefab.name, player2.transform.position, player2.transform.rotation);

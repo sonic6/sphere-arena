@@ -41,8 +41,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     private void StartGame()
     {
-        if (PhotonNetwork.IsMasterClient)
-            PhotonRoom.masterClient = true;
         SceneManager.LoadScene(1);
     }
 }

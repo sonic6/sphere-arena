@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class SphereSpawner : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class SphereSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spawner = this;
-        StartCoroutine(SpawnAfterTime());
+        if (PhotonNetwork.IsMasterClient)
+        {
+            spawner = this;
+            StartCoroutine(SpawnAfterTime());
+        }
+        else
+            gameObject.SetActive(false);
     }
 
     private void Update()
@@ -38,7 +44,7 @@ public class SphereSpawner : MonoBehaviour
     //Spawns a sphere immediately when called
     void Spawn()
     {
-        Instantiate(spherePrefab, transform.position, transform.rotation);
+        PhotonNetwork.Instantiate(spherePrefab.name, transform.position, transform.rotation);
         ballsInGame++;
     }
 
