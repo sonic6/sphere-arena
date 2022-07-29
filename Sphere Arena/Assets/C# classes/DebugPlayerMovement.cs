@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Photon.Pun;
 
 public class DebugPlayerMovement : MonoBehaviour
 {
@@ -11,10 +12,23 @@ public class DebugPlayerMovement : MonoBehaviour
 
     Vector3 movementPosition;
 
+    private void Awake()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        //If this gameobject is not the player for this device, disable its player controller
+        if (PhotonRoom.localPlayerID != GetComponent<PhotonView>().ViewID)
+        {
+            enabled = false;
+            print("local player ID is " + PhotonRoom.localPlayerID);
+            print(gameObject.name + "'s ViewID is " + GetComponent<PhotonView>().ViewID);
+        }
     }
 
     // Update is called once per frame

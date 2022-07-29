@@ -1744,8 +1744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 6185783189565182350, guid: b2b20df20f87a0d4688bbd12a1116853, type: 3}
-  player1: {fileID: 6185783191396989047}
-  player2: {fileID: 1546979932}
+  player1pos: {fileID: 6185783191396989047}
+  player2pos: {fileID: 1546979932}
 --- !u!1 &1371364542
 GameObject:
   m_ObjectHideFlags: 0

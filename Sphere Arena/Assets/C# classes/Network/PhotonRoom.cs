@@ -7,9 +7,11 @@ using UnityEngine;
 public class PhotonRoom : MonoBehaviour
 {
     [SerializeField] GameObject playerPrefab;
+    public static int localPlayerID;
+    [SerializeField] GameObject player1pos;
+    [SerializeField] GameObject player2pos;
 
-    [SerializeField] GameObject player1;
-    [SerializeField] GameObject player2;
+    GameObject player = null;
 
     // Start is called before the first frame update
     void Start()
@@ -20,19 +22,19 @@ public class PhotonRoom : MonoBehaviour
     //Host and guest variables might be useless and should be removed
     private void SpawnPlayer()
     {
-        GameObject player;
-
         if (PhotonNetwork.IsMasterClient)
         {
-            player = PhotonNetwork.Instantiate(playerPrefab.name, player1.transform.position, player1.transform.rotation);
+            player = PhotonNetwork.Instantiate(playerPrefab.name, player1pos.transform.position, player1pos.transform.rotation);
             GameManager.host = player;
+            PhotonNetwork.AllocateViewID(player);
+            localPlayerID = player.GetComponent<PhotonView>().ViewID;
         }
         else
         {
-            player = PhotonNetwork.Instantiate(playerPrefab.name, player2.transform.position, player2.transform.rotation);
+            player = PhotonNetwork.Instantiate(playerPrefab.name, player2pos.transform.position, player2pos.transform.rotation);
             GameManager.guest = player;
+            PhotonNetwork.AllocateViewID(player);
+            localPlayerID = player.GetComponent<PhotonView>().ViewID;
         }
-
-        
     }
 }

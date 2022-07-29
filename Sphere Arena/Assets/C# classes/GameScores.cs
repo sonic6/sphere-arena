@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class GameScores : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class GameScores : MonoBehaviour
 
     public void RegisterGoal(int playerIndex, GameObject ball)
     {
-        Destroy(ball);
+        PhotonNetwork.Destroy(ball);
         playerScores[playerIndex - 1]++;
         uiTexts[playerIndex - 1].text = "Player " + playerIndex + ": " + playerScores[playerIndex - 1];
         CheckWinner();
@@ -39,6 +40,7 @@ public class GameScores : MonoBehaviour
     private void DeclareWinner(string winnerName)
     {
         print(winnerName + " wins");
+        PhotonNetwork.LeaveRoom();
         Time.timeScale = 0;
     }
 }
