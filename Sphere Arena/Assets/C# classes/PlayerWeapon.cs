@@ -15,10 +15,10 @@ public abstract class PlayerWeapon : MonoBehaviour
         switch(transform.parent.tag)
         {
             case "PlayerOne":
-                directionMultiplier = -1;
+                directionMultiplier = 1;
                 break;
             case "PlayerTwo":
-                directionMultiplier = 1;
+                directionMultiplier = -1;
                 break;
         }
         SetDirection(directionMultiplier);
@@ -30,7 +30,6 @@ public abstract class PlayerWeapon : MonoBehaviour
     {
         if (other.GetComponent<Sphere>())
             GetComponentInParent<DebugPlayerMovement>().activeWeapon = this;
-
     }
 
     protected abstract void SetDirection(int directionMultiplier);
@@ -40,8 +39,9 @@ public abstract class PlayerWeapon : MonoBehaviour
         if (ball.gameObject.tag == "ball")
         {
             transform.parent.GetComponent<AudioSource>().Play();
-            ball.gameObject.GetComponent<Rigidbody>().AddForce(pushDirection * pushStrength);
-            ball.GetComponent<Sphere>().lastForce = (pushDirection * pushStrength);
+            ball.gameObject.GetComponent<Rigidbody>().AddForce(pushDirection);
+            print($"pushed {ball.gameObject.name} towards {pushDirection}");
+            ball.GetComponent<Sphere>().lastForce = (pushDirection);
         }
     }
 }

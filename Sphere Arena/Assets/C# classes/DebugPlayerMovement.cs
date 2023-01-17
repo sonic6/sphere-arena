@@ -6,16 +6,13 @@ using Photon.Pun;
 
 public class DebugPlayerMovement : MonoBehaviour
 {
+    bool keyboardInput = true;
+
     [SerializeField] float speedLimiter;
     Rigidbody rb;
     [HideInInspector] public PlayerWeapon activeWeapon;
 
     Vector3 movementPosition;
-
-    private void Awake()
-    {
-        
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -35,10 +32,12 @@ public class DebugPlayerMovement : MonoBehaviour
     void Update()
     {
         //move pawns with keyboard buttons
-        //movementPosition = new Vector3(transform.position.x + Input.GetAxis("Horizontal") / speedLimiter, transform.position.y, transform.position.z);
+        if(keyboardInput)
+            movementPosition = new Vector3(transform.position.x + Input.GetAxis("Horizontal") / speedLimiter, transform.position.y, transform.position.z);
 
         //move pawns using phone tilt
-        movementPosition = new Vector3(transform.position.x + Input.acceleration.x / speedLimiter, transform.position.y, transform.position.z);
+        else
+            movementPosition = new Vector3(transform.position.x + Input.acceleration.x / speedLimiter, transform.position.y, transform.position.z);
 
         rb.MovePosition(movementPosition);
 

@@ -25,6 +25,7 @@ public class PhotonRoom : MonoBehaviour
         if (PhotonNetwork.IsMasterClient)
         {
             player = PhotonNetwork.Instantiate(playerPrefab.name, player1pos.transform.position, player1pos.transform.rotation);
+            player.tag = "PlayerOne";
             GameManager.host = player;
             PhotonNetwork.AllocateViewID(player);
             localPlayerID = player.GetComponent<PhotonView>().ViewID;
@@ -32,6 +33,7 @@ public class PhotonRoom : MonoBehaviour
         else
         {
             player = PhotonNetwork.Instantiate(playerPrefab.name, player2pos.transform.position, player2pos.transform.rotation);
+            player.tag = "PlayerTwo";
             GameManager.guest = player;
             PhotonNetwork.AllocateViewID(player);
             localPlayerID = player.GetComponent<PhotonView>().ViewID;
